@@ -1,14 +1,21 @@
 // Bai1
-function baiTap1(arr) {
-    var sum = 0
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] > 0) {
-            sum += arr[i]
-        }
-    }
-    console.log(sum)
+
+var valueArr = [];
+
+function baiTap1() {
+    var string = document.getElementById("txtNumBT1").value; // value của input
+    valueArr.push(string);
+    console.log(valueArr)
+    document.getElementById("resultBT1").innerHTML = valueArr;
+    // var sum = 0
+    // for (var i = 0; i < arr.length; i++) {
+    //     if (arr[i] > 0) {
+    //         sum += arr[i]
+    //     }
+    // }
+    // console.log(sum)
 }
-baiTap1([1, 3, 5, 2, 7, 4])
+// baiTap1([1, 3, 5, 2, 7, 4])
 // bai2
 function baiTap2(arr) {
     var sum = 0
@@ -119,3 +126,12 @@ function baiTap8(array) {
     }
 }
 baiTap8([1, 3, 4, 5, 6, 7])
+function baiTap9(){
+    var cout = 0
+    for (var i = 0; i < valueArr.length; i++) {
+        if (Number.isInteger(+valueArr[i]) && Number(+valueArr[i]) > 0) {
+            cout++  
+        }
+    }
+    document.getElementById("resultBT2").innerHTML=cout
+}
